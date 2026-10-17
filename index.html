@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Roda Putar PAI — Misi Akhlak Mulia</title>
+<style>
+:root{--navy:#171a45;--purple:#6748df;--teal:#11a995;--yellow:#ffd166;--paper:#f5f6ff;--ink:#24264d;--muted:#6a6e91}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 15% 0,#e8e2ff 0,transparent 35%),linear-gradient(135deg,#f7f7ff,#e9fbf6);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);min-height:100vh}button{font:inherit;cursor:pointer;touch-action:manipulation}button:focus-visible{outline:4px solid #f2ad25;outline-offset:3px}.app{max-width:1120px;margin:auto;padding:clamp(12px,3vw,28px)}.top{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:16px}.brand{display:flex;align-items:center;gap:10px;font-weight:900;color:var(--navy)}.brandicon{width:46px;height:46px;border-radius:15px;background:var(--yellow);display:grid;place-items:center;font-size:25px}.pill{background:#fff;border:1px solid #e1e2f2;border-radius:99px;padding:9px 13px;font-size:12px;font-weight:800;color:var(--muted)}.hero{background:var(--navy);color:white;border-radius:26px;padding:clamp(20px,4vw,32px);box-shadow:0 16px 35px #25245220}.eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:.15em;color:#c7bdff;font-weight:900}.hero h1{font-size:clamp(28px,5vw,44px);line-height:1.05;margin:9px 0}.hero p{line-height:1.6;color:#e2e4ff;max-width:750px;margin:0}.layout{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(300px,.9fr);gap:18px;margin-top:18px;align-items:start}.wheelpanel,.sidepanel{background:#ffffffd9;border:1px solid #e2e4f3;border-radius:24px;padding:clamp(14px,2.5vw,22px);box-shadow:0 8px 24px #28245a0a}.wheelwrap{width:min(100%,560px);aspect-ratio:1;margin:0 auto;position:relative;display:grid;place-items:center}.wheelwrap canvas{width:100%;height:100%;display:block;filter:drop-shadow(0 10px 12px #22234b20)}.pointer{position:absolute;z-index:2;top:-2px;left:50%;transform:translateX(-50%);width:0;height:0;border-left:19px solid transparent;border-right:19px solid transparent;border-top:0;border-bottom:43px solid #fff;filter:drop-shadow(0 3px 3px #1115)}.pointer:after{content:"";position:absolute;top:5px;left:-12px;border-left:12px solid transparent;border-right:12px solid transparent;border-bottom:27px solid #f34d76}.hub{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:17%;aspect-ratio:1;border-radius:50%;background:#fff;border:5px solid var(--yellow);display:grid;place-items:center;color:var(--navy);font-weight:1000;font-size:clamp(11px,2vw,18px);box-shadow:0 3px 12px #171a4540;pointer-events:none}.spinrow{display:flex;gap:10px;margin-top:14px}.bigbtn{flex:1;border:0;border-radius:16px;padding:17px 14px;font-weight:950;font-size:clamp(15px,2vw,19px);min-height:58px}.spin{background:var(--yellow);color:#30244f;box-shadow:0 5px 0 #d5a743}.spin:disabled{opacity:.6;cursor:wait}.mute{background:#eeecff;color:#5140ad}.caption{text-align:center;color:var(--muted);font-size:13px;margin:12px 0 0}.sidehead{display:flex;justify-content:space-between;align-items:center;gap:10px}.sidehead h2{margin:0;font-size:20px}.counter{background:#eae6ff;color:#5139b7;border-radius:99px;padding:7px 10px;font-size:12px;font-weight:900}.questionbox{background:#f5f3ff;border:1px solid #e3ddff;border-radius:19px;padding:20px;margin-top:15px;min-height:180px;display:flex;flex-direction:column;justify-content:center}.category{font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.12em;color:#6b50cf}.question{font-size:clamp(20px,2.5vw,27px);font-weight:900;line-height:1.3;margin:10px 0 0;color:var(--navy)}.placeholder{color:var(--muted);font-size:16px;line-height:1.6;font-weight:650}.answer{display:none;background:#e7fbf4;border:1px solid #b8ead8;border-radius:16px;padding:15px;margin-top:12px;line-height:1.6;color:#075b49}.answer.show{display:block;animation:appear .25s ease}.answer strong{display:block;margin-bottom:5px}.actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}.action{border:1px solid #e1e2f2;background:white;border-radius:14px;min-height:52px;padding:12px;font-weight:850;color:var(--navy)}.action:disabled{opacity:.45;cursor:not-allowed}.tip{margin-top:14px;background:#fff8df;border:1px solid #f4e3a8;border-radius:15px;padding:13px;font-size:13px;line-height:1.5;color:#67511c}.bottom{text-align:center;font-size:12px;color:var(--muted);padding:20px 0 5px}.sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}@keyframes appear{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}@media(max-width:780px){.layout{grid-template-columns:1fr}.wheelwrap{width:min(100%,500px)}.sidepanel{order:2}.wheelpanel{order:1}}@media(max-width:480px){.pill{display:none}.spinrow{flex-direction:column}.bigbtn{width:100%}.questionbox{min-height:155px}.actions{grid-template-columns:1fr 1fr}.pointer{border-left-width:16px;border-right-width:16px;border-bottom-width:36px}.pointer:after{left:-10px;border-left-width:10px;border-right-width:10px;border-bottom-width:22px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<main class="app">
+<header class="top"><div class="brand"><div class="brandicon">🎯</div><div>RODA PUTAR PAI<br><span style="font-size:11px;color:var(--muted);font-weight:700">KELAS X • JENJANG SMK</span></div></div><div class="pill">24 TANTANGAN • BELAJAR AKHLAK</div></header>
+<section class="hero"><div class="eyebrow">Putar • Pikirkan • Jawab</div><h1>Misi Akhlak Mulia</h1><p>Putar roda dan dapatkan satu tantangan tentang menghindari akhlak mazmumah: berfoya-foya, riya, dan sum’ah. Bacalah soal, diskusikan jawabannya, lalu tekan “Lihat Jawaban” untuk memeriksa pemahamanmu.</p></section>
+<section class="layout">
+<div class="wheelpanel"><div class="wheelwrap"><div class="pointer" aria-hidden="true"></div><canvas id="wheel" width="900" height="900" role="img" aria-label="Roda putar berisi 24 tantangan PAI"></canvas><div class="hub">PAI</div></div><div class="spinrow"><button class="bigbtn spin" id="spin">🎡 PUTAR RODA</button><button class="bigbtn mute" id="sound" aria-pressed="true">🔊 Suara aktif</button></div><p class="caption" id="wheelHint">Tekan tombol untuk memilih tantangan secara acak.</p></div>
+<aside class="sidepanel"><div class="sidehead"><h2>🎲 Tantanganmu</h2><span class="counter" id="count">Belum dipilih</span></div><div class="questionbox" aria-live="polite" aria-atomic="true"><div class="category" id="category">SIAP BERMAIN?</div><div class="question placeholder" id="question">Tantangan yang terpilih akan muncul di sini. Siapkan jawaban terbaikmu!</div></div><div class="answer" id="answer" aria-live="polite"><strong>💡 Jawaban / panduan</strong><span id="answerText"></span></div><div class="actions"><button class="action" id="showAnswer" disabled>👁 Lihat Jawaban</button><button class="action" id="spinAgain">↻ Putar Lagi</button></div><div class="tip"><b>📣 Tips diskusi:</b> Berikan alasan dan contoh nyata dari kehidupan sehari-hari. Jawaban siswa dapat bervariasi selama sesuai dengan nilai PAI.</div></aside>
+</section><footer class="bottom">Pendidikan Agama Islam dan Budi Pekerti • Kelas X SMK<br>Gunakan harta dengan bijak, luruskan niat, dan jaga ketulusan amal.</footer>
+</main>
+<script>
+(()=> {
+const data=[
+{c:"Berfoya-foya · Pengertian",q:"Apa yang dimaksud dengan berfoya-foya?",a:"Menggunakan atau menghamburkan harta secara berlebihan untuk hal yang tidak bermanfaat. Sikap yang tepat adalah hidup sederhana dan menggunakan harta secara bertanggung jawab."},
+{c:"Berfoya-foya · Contoh",q:"Seseorang membeli barang mahal hanya agar terlihat keren, padahal tidak dibutuhkan. Apa sikap yang perlu diperbaiki?",a:"Perilaku konsumtif dan berlebihan. Dahulukan kebutuhan, buat anggaran, dan pertimbangkan manfaat sebelum membeli."},
+{c:"Berfoya-foya · Penerapan",q:"Sebutkan dua cara menggunakan uang saku secara bijak!",a:"Contohnya membuat anggaran, mendahulukan kebutuhan sekolah, menabung, berbagi sesuai kemampuan, dan menghindari pembelian impulsif."},
+{c:"Berfoya-foya · Studi kasus",q:"Kamu mendapat uang hadiah. Teman mengajak menghabiskannya untuk hal yang tidak perlu. Apa keputusan bijakmu?",a:"Pertimbangkan kebutuhan dan manfaat. Sisihkan untuk tabungan atau kebutuhan penting dan gunakan sisanya secara wajar."},
+{c:"Berfoya-foya · Refleksi",q:"Apa perbedaan menikmati rezeki dan berfoya-foya?",a:"Menikmati rezeki secara wajar, bersyukur, dan tidak melalaikan kewajiban berbeda dari menghamburkan harta secara berlebihan atau untuk hal yang tidak bermanfaat."},
+{c:"Berfoya-foya · Nilai Islam",q:"Mengapa seorang muslim dianjurkan tidak berlebih-lebihan dalam menggunakan harta?",a:"Karena harta adalah amanah yang perlu digunakan secara bertanggung jawab. Sikap tidak berlebihan membantu memenuhi kebutuhan, menabung, dan menolong sesama."},
+{c:"Berfoya-foya · Tantangan",q:"Buat satu slogan singkat untuk mengajak teman hidup sederhana!",a:"Contoh: “Belanja sesuai kebutuhan, bersyukur atas kecukupan!” Slogan lain boleh selama mengajak hidup hemat dan bertanggung jawab."},
+{c:"Berfoya-foya · Pilihan sikap",q:"Mana yang lebih bijak: mengikuti tren atau mempertimbangkan kebutuhan? Jelaskan.",a:"Mempertimbangkan kebutuhan lebih bijak. Tren boleh dipertimbangkan jika bermanfaat dan sesuai kemampuan, bukan demi gengsi."},
+{c:"Riya · Pengertian",q:"Apa yang dimaksud dengan riya?",a:"Melakukan amal atau ibadah agar dilihat dan mendapat pujian manusia, bukan semata-mata karena Allah Swt."},
+{c:"Riya · Contoh",q:"Seseorang sengaja bersedekah di depan banyak orang agar dipuji dermawan. Perilaku apa yang perlu diwaspadai?",a:"Riya, yaitu beramal demi mendapatkan pujian. Sedekah hendaknya dilakukan dengan ikhlas; menampakkan amal tidak otomatis riya jika niat dan caranya benar."},
+{c:"Riya · Cara menghindari",q:"Sebutkan dua cara menghindari riya!",a:"Meluruskan niat, mengingat bahwa Allah mengetahui amal, membiasakan amal tanpa mencari pujian, serta mengevaluasi niat sebelum dan sesudah berbuat baik."},
+{c:"Riya · Studi kasus",q:"Kamu membantu teman belajar. Tidak ada yang melihat atau memujimu. Mengapa kamu tetap mau membantu?",a:"Karena membantu adalah perbuatan baik yang bernilai dan bermanfaat, bukan semata-mata untuk pujian. Niat yang tulus perlu terus dijaga."},
+{c:"Riya · Refleksi",q:"Apakah setiap amal yang dilihat orang lain pasti riya? Jelaskan.",a:"Tidak. Riya berkaitan dengan niat mencari pujian. Amal yang terlihat orang lain tidak otomatis riya; niat, tujuan, dan cara melakukannya perlu diperhatikan."},
+{c:"Riya · Tantangan",q:"Sebutkan satu contoh amal baik yang bisa dilakukan secara diam-diam!",a:"Contohnya membantu teman tanpa mengumumkannya, menyumbang secara pribadi, atau membersihkan ruang kelas tanpa mencari perhatian."},
+{c:"Riya · Perbaikan diri",q:"Apa yang sebaiknya kamu lakukan jika menyadari mulai ingin dipuji saat beramal?",a:"Berhenti sejenak, luruskan kembali niat, mohon pertolongan Allah, dan fokus pada manfaat amal daripada penilaian orang."},
+{c:"Riya · Pilihan sikap",q:"Teman memamerkan kebaikannya dan kamu merasa ingin menyainginya agar dipuji. Apa yang sebaiknya dilakukan?",a:"Jangan menjadikan amal sebagai perlombaan untuk mendapat pujian. Fokus pada niat yang ikhlas dan tetap menghargai kebaikan orang lain."},
+{c:"Sum’ah · Pengertian",q:"Apa yang dimaksud dengan sum’ah?",a:"Menceritakan atau memperdengarkan amal agar orang lain mengetahui lalu memuji atau mengakui dirinya."},
+{c:"Sum’ah · Contoh",q:"Seseorang terus menceritakan sedekahnya supaya dianggap paling dermawan. Perilaku apa yang perlu dihindari?",a:"Sum’ah, yaitu menceritakan amal demi pujian atau pengakuan. Cerita tentang amal untuk edukasi atau menginspirasi tidak otomatis sum’ah; niat dan caranya penting."},
+{c:"Sum’ah · Cara menghindari",q:"Bagaimana cara menjaga diri dari sum’ah?",a:"Tidak membanggakan amal demi pengakuan, menjaga kerendahan hati, meluruskan niat, dan berbicara tentang kebaikan seperlunya dengan tujuan yang baik."},
+{c:"Sum’ah · Studi kasus",q:"Kamu ingin mengunggah foto kegiatan amal ke media sosial. Hal apa yang perlu dipikirkan terlebih dahulu?",a:"Periksa niat, manfaat unggahan, privasi dan martabat penerima bantuan, serta hindari menjadikan amal sebagai sarana mencari pujian."},
+{c:"Sum’ah · Refleksi",q:"Apa perbedaan sederhana antara riya dan sum’ah?",a:"Riya berkaitan dengan ingin dilihat saat beramal, sedangkan sum’ah berkaitan dengan ingin didengar atau mengetahui amal melalui cerita. Keduanya dapat muncul jika tujuannya mencari pujian."},
+{c:"Sum’ah · Tantangan",q:"Berikan contoh cara mengajak orang berbuat baik tanpa membanggakan diri!",a:"Ajak dengan sopan, jelaskan manfaat kegiatan, beri ruang bagi orang lain, dan hindari mengklaim diri paling berjasa."},
+{c:"Sum’ah · Perbaikan diri",q:"Kamu terlanjur menceritakan amal untuk mendapat pujian. Apa langkah perbaikan yang bisa dilakukan?",a:"Sadari dan evaluasi niat, memohon ampun kepada Allah, memperbaiki niat, serta berusaha tidak mengulangi perilaku tersebut."},
+{c:"Gabungan · Akhlak mulia",q:"Sebutkan satu sikap positif untuk melawan berfoya-foya, riya, dan sum’ah!",a:"Hidup sederhana membantu menghindari pemborosan; ikhlas menjaga niat dari pujian; rendah hati membantu menghindari kebiasaan membanggakan amal."}
+];
+const colors=["#6548db","#168f9c","#e5a72f","#d84d79","#3f66bf","#138b70","#8551bc","#d16b35"];
+const canvas=document.getElementById('wheel'),ctx=canvas.getContext('2d');
+const spinBtn=document.getElementById('spin'),again=document.getElementById('spinAgain'),show=document.getElementById('showAnswer');
+let rotation=0,spinning=false,selected=-1,soundOn=true,audioCtx=null,turn=0;
+const TAU=Math.PI*2,step=TAU/data.length;
+function draw(){
+ const w=canvas.width,c=w/2,r=w*.465;ctx.clearRect(0,0,w,w);
+ for(let i=0;i<data.length;i++){
+  const start=rotation+i*step-Math.PI/2,end=start+step;
+  ctx.beginPath();ctx.moveTo(c,c);ctx.arc(c,c,r,start,end);ctx.closePath();ctx.fillStyle=colors[i%colors.length];ctx.fill();ctx.strokeStyle="#fff";ctx.lineWidth=4;ctx.stroke();
+  ctx.save();ctx.translate(c,c);ctx.rotate(start+step/2);ctx.textAlign="right";ctx.textBaseline="middle";ctx.fillStyle="#fff";ctx.font="900 26px system-ui";ctx.shadowColor="#0004";ctx.shadowBlur=2;
+  ctx.fillText(String(i+1).padStart(2,'0'),r-28,0);ctx.restore();
+ }
+ ctx.beginPath();ctx.arc(c,c,r+2,0,TAU);ctx.strokeStyle="#fff";ctx.lineWidth=10;ctx.stroke();
+}
+function beep(type){
+ if(!soundOn)return;
+ try{audioCtx=audioCtx||new(window.AudioContext||window.webkitAudioContext)();if(audioCtx.state==='suspended')audioCtx.resume();const o=audioCtx.createOscillator(),g=audioCtx.createGain();o.connect(g);g.connect(audioCtx.destination);const now=audioCtx.currentTime;const freq=type==='win'?880:type==='tick'?460:type==='bad'?260:680;o.type='sine';o.frequency.setValueAtTime(freq,now);if(type==='win')o.frequency.linearRampToValueAtTime(1100,now+.22);g.gain.setValueAtTime(.0001,now);g.gain.exponentialRampToValueAtTime(.06,now+.02);g.gain.exponentialRampToValueAtTime(.0001,now+(type==='tick'?.045:.22));o.start(now);o.stop(now+(type==='tick'?.05:.24))}catch(e){}
+}
+function showQuestion(i){
+ selected=i;turn++;const d=data[i];document.getElementById('category').textContent=d.c;document.getElementById('question').textContent=d.q;document.getElementById('question').classList.remove('placeholder');document.getElementById('count').textContent='Tantangan '+(i+1)+' dari 24';document.getElementById('answerText').textContent=d.a;document.getElementById('answer').classList.remove('show');show.disabled=false;document.getElementById('wheelHint').textContent='Tantangan '+(i+1)+' terpilih. Pikirkan jawabanmu sebelum melihat panduan.';
+}
+function spin(){
+ if(spinning)return;spinning=true;spinBtn.disabled=true;again.disabled=true;show.disabled=true;document.getElementById('answer').classList.remove('show');document.getElementById('wheelHint').textContent='Roda sedang berputar…';
+ const target=Math.floor(Math.random()*data.length),centerAngle=TAU-(target+.5)*step;
+ const current=((rotation%TAU)+TAU)%TAU,desired=((centerAngle%TAU)+TAU)%TAU;
+ const delta=(desired-current+TAU)%TAU,extra=(5+Math.floor(Math.random()*3))*TAU;
+ const start=rotation,total=extra+delta,duration=4300+Math.random()*700,begin=performance.now();let lastTick=-1;
+ function frame(now){
+  const t=Math.min(1,(now-begin)/duration),ease=1-Math.pow(1-t,4);rotation=start+total*ease;draw();
+  const tick=Math.floor(ease*total/step);if(tick!==lastTick&&t<.96){lastTick=tick;beep('tick')}
+  if(t<1){requestAnimationFrame(frame)}else{
+   rotation=((rotation%TAU)+TAU)%TAU;draw();spinning=false;spinBtn.disabled=false;again.disabled=false;showQuestion(target);beep('win');
+  }
+ }
+ requestAnimationFrame(frame);
+}
+spinBtn.addEventListener('click',spin);again.addEventListener('click',spin);
+show.addEventListener('click',()=>{if(selected<0)return;document.getElementById('answer').classList.add('show');show.disabled=true;beep('good')});
+document.getElementById('sound').addEventListener('click',e=>{soundOn=!soundOn;e.currentTarget.textContent=soundOn?'🔊 Suara aktif':'🔇 Suara nonaktif';e.currentTarget.setAttribute('aria-pressed',soundOn);if(soundOn)beep('good')});
+draw();
+})();
+</script>
+</body>
+</html>
